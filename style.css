@@ -92,8 +92,9 @@ body{
 }
 
 .inventario img:hover{
+    transition: all 0.2s ease-in;
     cursor: pointer;
-    transition: all 0.2s ease;
+    scale: 1.1;
     box-shadow: 2px 2px 2px brown;
 }
 
