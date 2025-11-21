@@ -1,0 +1,47 @@
+body{
+    background-color: antiquewhite;
+    width: 100vw;
+    margin: 0 auto;
+}
+.cabecera{
+    margin: 0 auto;
+    text-align: center;
+    width: 100vw;
+}
+
+#productos{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+#producto{
+    text-align: center;
+    margin: 0 auto;
+    border: 7px groove brown;
+    box-shadow: 2px 2px 10px black inset;
+    padding: 1em;
+    background-color: lightgoldenrodyellow;
+    border-radius: 0.3em;
+}
+
+#producto #comprar{
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    color: rgb(108, 108, 108);
+    background-color: blanchedalmond;
+    border: none;
+    border-radius: 0.3em;
+    font-size: 2em;
+    box-shadow: 1px 1px 1px black;
+}
+
+#producto #comprar:hover{
+    transform: scale(1.1);
+}
+
+div{
+    border: 1px solid black;
+}
