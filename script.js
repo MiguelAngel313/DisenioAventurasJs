@@ -1,9 +1,10 @@
+//Importar scripts
 import { Producto } from './modules/Producto.js';
 import { Jugador } from './modules/jugador.js';
 import { categorizarJugadores, rankearJugadores } from './modules/ranking.js';
 import { Enemigo, JefeFinal } from './modules/Enemigo.js';
 
-let jugadores = ['Cazador','Cazadora','Asesino','Guardian','Caballero'];
+
 
 
 const jugador = new Jugador(jugadores[1]);
