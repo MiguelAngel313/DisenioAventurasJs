@@ -32,7 +32,7 @@ body{
     border-radius: 0.3em;
 }
 
-#producto #comprar{
+#producto .comprar{
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     color: rgb(108, 108, 108);
@@ -43,7 +43,7 @@ body{
     box-shadow: 1px 1px 1px black;
 }
 
-#producto #comprar:hover{
+#producto .comprar:hover{
     transform: scale(1.1);
 }
 
