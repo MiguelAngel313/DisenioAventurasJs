@@ -26,3 +26,7 @@ export class Producto {
         return new Producto(this.nombre, nuevoPrecio, this.rareza, this.tipo, this.bono);
     }
 }
+
+function getPrecio() {
+    return this.precio;
+}
