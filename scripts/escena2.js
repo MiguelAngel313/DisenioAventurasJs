@@ -1,23 +1,12 @@
-import { Producto } from "../modules/producto";
+// TODO: Mirar import y export con objetos en js
 
-const productos = crearProductos();
-establecerPrecios(productos);
+let productos = document.querySelectorAll('.precio');
 
-function crearProductos(){
-let casco = new Producto("Casco", 400, "Común", "Defensa", 10);
-let armadura = new Producto("Armadura", 300, "Común", "Defensa", 10);
-let anillo = new Producto("Anillo", 300, "Común", "Salud", 10);
-let martillo = new Producto("Martillo", 300, "Común", "Ataque", 10);
-let botella = new Producto("Botella", 300, "Común", "Salud", 10);
-let hoja = new Producto("Hoja", 300, "Común", "Ataque", 10);
-const arrayProductos = [casco, armadura, anillo, martillo, botella, hoja];
 
-return arrayProductos;
-}
+productos.forEach(p =>{
+    p.textContent = 400;
+})
 
-function establecerPrecios(productos){
-    let precios = document.getElementsByClassName("precio");
-    for(let i = 0; i < precios.length; i++){
-        precios[i].textContent = productos[i].precio;
-    }
-}
+
+
+
