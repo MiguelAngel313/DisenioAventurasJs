@@ -8,14 +8,14 @@ export class Jugador {
     ataque;
     defensa;
 
-    constructor(nombre) {
+    constructor(nombre, ataque, defensa) {
         this.nombre = nombre;
-        this.puntos = 7000;
+        this.puntos = 500;
         this.vidaMax = 200;
         this.vida = this.vidaMax;
+        this.ataque = ataque;
+        this.defensa = defensa;
         this.inventario = [];
-        this.ataque = 10;
-        this.defensa = 10;
     }
 
     agregarItem(item) {
