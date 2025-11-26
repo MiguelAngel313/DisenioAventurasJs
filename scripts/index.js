@@ -1,6 +1,6 @@
 import { Jugador } from '../modules/Jugador.js';
-export let numeroJugador = 0;
-let jugadores = agregarJugador();
+export let numeroJugador = 3;
+export let jugadores = agregarJugador();
 let imagenPersonaje = document.getElementById('imgPersonaje');
 let botonContinuar = document.getElementById('continuar1');
 botonContinuar.addEventListener('click', () => {

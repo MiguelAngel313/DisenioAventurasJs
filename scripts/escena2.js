@@ -1,6 +1,7 @@
 // Importar clase producto para poder crear productos y jugador
 import { Producto } from '../modules/Producto.js';
 import { Jugador } from '../modules/Jugador.js';
+import { numeroJugador, jugadores } from './index.js';
 //Variable para editar el precio en pantalla de los Objetos
 let precios = document.querySelectorAll('.precio');
 //Array de los productos creados para utilizarlos en la compra y venta
@@ -8,6 +9,8 @@ const productos = crearProducto();
 
 //Array de botones para poder llamarlos a todos con un sola clase
 const botonComprar = document.querySelectorAll('.comprar');
+//Boton de continuar
+const botonContinuar = document.getElementById('continuar2');
 //Array de que almacena todas las imagenes de los objetos comprados en el inventario
 const imgInventario = document.querySelectorAll('.inventario img');
 
@@ -80,3 +83,7 @@ function crearProducto(){
         }
     }
 
+botonContinuar.addEventListener('click', () => {
+
+    window.location.href = '../index.html';
+});
