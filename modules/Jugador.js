@@ -14,8 +14,8 @@ export class Jugador {
         this.vidaMax = 200;
         this.vida = this.vidaMax;
         this.inventario = [];
-        this.ataque = 0;
-        this.defensa = 0;
+        this.ataque = 10;
+        this.defensa = 10;
     }
 
     agregarItem(item) {
