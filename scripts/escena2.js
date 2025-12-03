@@ -30,13 +30,14 @@ function guardarEnInventario(imagen){
 }
 
 function eliminarDeInventario(imagen){
-    for (let i = 0; i < imagenes.length; ++i) {
-        console.log('a: '+i);
-        if (imagenes[i] === imagen.src) {
-            console.log(imagen.src);
-            inventario.splice(i, 1);
-            console.log(inventario);
-            console.log('b: '+i);
+    for (let i = 0; i < productos.length; ++i) {
+        if (productos[i].img === imagen.getAttribute('src')) {
+            for (let j = 0; j < inventario.length; ++j) {
+                if (inventario[j].img === productos[i].img) {
+                    inventario.splice(j, 1);
+                    console.log('Inventario: ', inventario);
+                }
+            }
         }
     }
 }
