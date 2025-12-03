@@ -1,5 +1,7 @@
 // Clase Producto
 export class Producto {
+    static contadorProducto = -1;
+    static imgs = ['./img/casco.png', './img/armadura.png', './img/Anillo.png', './img/Martillo.png', './img/botella.png', './img/hoja.png'];
     nombre;
     precio;
     rareza;
@@ -7,11 +9,14 @@ export class Producto {
     bono;
 
     constructor(nombre, precio, rareza, tipo, bono) {
+        Producto.contadorProducto++;
+        this.id = Producto.contadorProducto;
         this.nombre = nombre;
         this.precio = precio;
         this.rareza = rareza;
         this.tipo = tipo;
         this.bono = bono;
+        this.img = Producto.imgs[this.id];
     }
 
     presentar() {
