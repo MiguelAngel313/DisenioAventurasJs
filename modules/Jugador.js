@@ -1,5 +1,9 @@
 // Clase Jugador
 export class Jugador {
+    
+    static contadorJugadores = 0;
+
+    numeroJugador;
     nombre;
     vida;
     vidaMax;
@@ -9,6 +13,8 @@ export class Jugador {
     defensa;
 
     constructor(nombre, ataque, defensa) {
+        Jugador.contadorJugadores++;
+        this.numeroJugador = Jugador.contadorJugadores;
         this.nombre = nombre;
         this.puntos = 500;
         this.vidaMax = 200;

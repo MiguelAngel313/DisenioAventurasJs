@@ -1,7 +1,9 @@
+//Recuperar jugador guardado de la página 1
+const jugador = JSON.parse(localStorage.getItem('jugadorSeleccionado'));
+let saldoActual = document.getElementById('saldo').textContent = jugador.puntos;
 // Importar clase producto para poder crear productos y jugador
 import { Producto } from '../modules/Producto.js';
 import { Jugador } from '../modules/Jugador.js';
-import { numeroJugador, jugadores } from './index.js';
 //Variable para editar el precio en pantalla de los Objetos
 let precios = document.querySelectorAll('.precio');
 //Array de los productos creados para utilizarlos en la compra y venta
@@ -42,14 +44,23 @@ function crearProducto(){
 
     botonComprar.forEach(boton => {
         boton.addEventListener('click', function() {
+            // Obtener el precio del elemento hermano
+        const elementoPadre = this.parentElement;
+        const precioTexto = elementoPadre.querySelector('.precio').textContent;
+        const precio = parseInt(precioTexto.replace('💶', ''));
             if (this.textContent === 'Comprar') {
+                if (jugador.puntos >= precio) {
                 cambiarImagen(this);
                 this.textContent = 'Vender';
                 this.style.backgroundColor = 'red';
-            } else {
+                jugador.puntos -= precio;
+                saldoActual = document.getElementById('saldo').textContent = jugador.puntos;
+            }} else {
                 cambiarImagen(this);
                 this.textContent = 'Comprar';
                 this.style.backgroundColor = 'blanchedalmond';
+                jugador.puntos += precio;
+                saldoActual = document.getElementById('saldo').textContent = jugador.puntos;
                 establecerPrecios();
             }
         });
@@ -60,7 +71,6 @@ function crearProducto(){
         let elementoPadre = elemento.parentElement;
         let imagen = elementoPadre.querySelector('img');
         if (elemento.textContent === 'Comprar') {   
-            elementoPadre.querySelector('.precio').textContent = '0💶';
             imagen.style.filter = 'grayscale(100%)';
            for (let i = 0; i < imgInventario.length; i++) {
             if (imgInventario[i].getAttribute('src') === '') {
