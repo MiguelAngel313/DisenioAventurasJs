@@ -2,6 +2,7 @@
 export class Jugador {
     
     static contadorJugadores = 0;
+    static imagenes = ['./img/cazadora.jpg', './img/cazador.jpg', './img/asesino.jpg', './img/guardian.jpg'];
 
     numeroJugador;
     nombre;
@@ -22,6 +23,7 @@ export class Jugador {
         this.ataque = ataque;
         this.defensa = defensa;
         this.inventario = [];
+        this.imagen = Jugador.imagenes[this.numeroJugador - 1];
     }
 
     agregarItem(item) {

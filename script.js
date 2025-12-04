@@ -1,6 +1,6 @@
 //Importar scripts
 import { Producto } from './modules/Producto.js';
-import { Jugador } from './modules/jugador.js';
+import { Jugador } from './modules/Jugador.js';
 import { categorizarJugadores, rankearJugadores } from './modules/ranking.js';
 import { Enemigo, JefeFinal } from './modules/Enemigo.js';
 

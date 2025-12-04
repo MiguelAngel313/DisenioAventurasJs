@@ -24,7 +24,6 @@ function guardarEnInventario(imagen){
         if (imagenes[i] === imagen.src) {
             console.log(imagen.src);
             inventario.push(productos[i]);
-            console.log(inventario);
         }
     }
 }
@@ -35,7 +34,6 @@ function eliminarDeInventario(imagen){
             for (let j = 0; j < inventario.length; ++j) {
                 if (inventario[j].img === productos[i].img) {
                     inventario.splice(j, 1);
-                    console.log('Inventario: ', inventario);
                 }
             }
         }
@@ -132,8 +130,8 @@ function crearProducto(){
     }
 
 botonContinuar.addEventListener('click', () => {
-
-    window.location.href = '../escena3.html';
+    jugador.inventario = inventario;
     localStorage.setItem('jugadorSeleccionado', JSON.stringify(jugador));
+    window.location.href = '../Escena3.html';
 });
 
