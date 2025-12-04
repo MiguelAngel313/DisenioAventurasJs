@@ -1,16 +1,23 @@
-// Clases Enemigo y JefeFinal
+// Clases Enemigo
 export class Enemigo {
+    static contadorEnemigos = -1;
+    static imagenes = ['./img/dragon.png','./img/caballero.png','./img/reina.png','./img/hechicero.png','./img/hidra.png','./img/robot.png'];
     tipo;
     nombre;
     ataque;
     vida;
-    defensa = 0; // Valor por defecto simple
+    defensa;
+    puntos;
 
-    constructor(tipo, nombre, ataque, vida) {
+    constructor(tipo, nombre, ataque, vida, defensa, puntos) {
+        Enemigo.contadorEnemigos++;
         this.tipo = tipo;
         this.nombre = nombre;
         this.ataque = ataque;
         this.vida = vida;
+        this.defensa = defensa;
+        this.puntos = puntos;
+        this.imagen = Enemigo.imagenes[Enemigo.contadorEnemigos];
     }
 
     accion() {

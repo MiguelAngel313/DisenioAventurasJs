@@ -1,6 +1,7 @@
 const jugador = JSON.parse(localStorage.getItem('jugadorSeleccionado'));
 const imagenJugador = document.getElementById('imgPersonaje');
 const imgInventario = document.querySelectorAll('.inventario img');
+const botonContinuar = document.getElementById('continuar1');
 establecerAtributos(jugador);
 
 function establecerAtributos(jugador){
@@ -38,3 +39,8 @@ function aplicarMejoras(){
         }
         }
     }
+
+    botonContinuar.addEventListener('click', function() {
+        localStorage.setItem('jugadorSeleccionado', JSON.stringify(jugador));
+        window.location.href = '../Escena4.html';
+    });
