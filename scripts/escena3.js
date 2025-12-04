@@ -1,12 +1,10 @@
 const jugador = JSON.parse(localStorage.getItem('jugadorSeleccionado'));
-console.log('Jugador: ',jugador);
-console.log('Inventario: ',jugador.inventario);
-console.log('Imagen inventario: ')
 const imagenJugador = document.getElementById('imgPersonaje');
 const imgInventario = document.querySelectorAll('.inventario img');
 establecerAtributos(jugador);
 
 function establecerAtributos(jugador){
+    aplicarMejoras();
     document.getElementById('nombrePersonaje').textContent = jugador.nombre;
     document.getElementById('ataque').textContent = jugador.ataque;
     document.getElementById('defensa').textContent = jugador.defensa;
@@ -23,3 +21,20 @@ function mostrarInventario(){
     }
 
 
+function aplicarMejoras(){
+    for (let i = 0; i < jugador.inventario.length; i++) {
+        switch (jugador.inventario[i].tipo) {
+            case 'Salud':
+                jugador.vidaMax += jugador.inventario[i].bono;
+                break;
+            case 'Ataque':
+                jugador.ataque += jugador.inventario[i].bono;
+                break;
+            case 'Defensa':
+                jugador.defensa += jugador.inventario[i].bono;
+                break;
+            default:
+                break;
+        }
+        }
+    }
