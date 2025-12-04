@@ -13,13 +13,13 @@ export class Jugador {
     ataque;
     defensa;
 
-    constructor(nombre, ataque, defensa) {
+    constructor(nombre, ataque, defensa, vida) {
         Jugador.contadorJugadores++;
         this.numeroJugador = Jugador.contadorJugadores;
         this.nombre = nombre;
         this.puntos = 500;
         this.vidaMax = 200;
-        this.vida = this.vidaMax;
+        this.vida = vida;
         this.ataque = ataque;
         this.defensa = defensa;
         this.inventario = [];

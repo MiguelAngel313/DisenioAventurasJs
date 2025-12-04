@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="formulario.js" type="module" defer></script>
+    <title>Defensa</title>
+</head>
+<body>
+
+    <form action="index.html">
+        <label for="name">Nombre jugador</label>
+        <input type="text" name="name" placeholder="Nombre" id="nombre"> <br>
+        <p id="errorNombre"></p>
+        <label for="atack">Ataque</label>
+        <input type="number" name="atack" placeholder="Ataque" value="0" step="1" min="0" id="ataque"> <br>
+        <p id="errorAtaque"></p>
+        <label for="defense">Defensa</label>
+        <input type="number" name="defense" placeholder="Defensa" value="0" step="1" min="0" id="defensa"> <br>
+        <p id="errorDefensa"></p>
+        <label for="healt">Vida</label>
+        <input type="number" name="healt" placeholder="Vida" value="100" id="vida" min="100" step="1"> <br>
+        <p id="errorVida"></p>
+        <input type="submit" value="Crear" id="enviar">
+    </form>
+    
+</body>
+</html>
