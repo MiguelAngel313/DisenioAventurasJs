@@ -13,7 +13,7 @@ function mostrarInventario(){
 
 function crearEnemigos(){
     let enemigosCreados = [];
-    let nombres= ['Dragon','Caballero','Reina','Hechicero','Hidra','Mecha'];
+    let nombres= ['Dragón','Caballero','Reina Araña','Hechicero','Hidra','Mecha'];
     let ataques = [20,15,10,15,10,5];
     let vidas = [100,80,60,80,60,40];
     let defensas = [10,5,5,10,5,2];
