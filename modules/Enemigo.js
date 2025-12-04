@@ -2,16 +2,14 @@
 export class Enemigo {
     static contadorEnemigos = -1;
     static imagenes = ['./img/dragon.png','./img/caballero.png','./img/reina.png','./img/hechicero.png','./img/hidra.png','./img/robot.png'];
-    tipo;
     nombre;
     ataque;
     vida;
     defensa;
     puntos;
 
-    constructor(tipo, nombre, ataque, vida, defensa, puntos) {
+    constructor(nombre, ataque, vida, defensa, puntos) {
         Enemigo.contadorEnemigos++;
-        this.tipo = tipo;
         this.nombre = nombre;
         this.ataque = ataque;
         this.vida = vida;

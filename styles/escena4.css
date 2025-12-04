@@ -1,0 +1,109 @@
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: antiquewhite;
+    width: 100vw;
+    margin: 0 auto;
+}
+
+.enemigos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+.contenedor{
+    background-color: burlywood;
+    border: 10px groove brown;
+    box-shadow: 2px 2px 10px black inset;
+}
+
+.enemigo{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+}
+
+.enemigo img{
+    max-width: 8rem;
+    border: 10px groove brown;
+    margin: 10px;
+}
+
+.estadisticas {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;;
+}
+
+.estadisticas p{
+    text-align: center;
+    border: 10px groove brown;
+    box-shadow: 2px 2px 10px black inset;
+    padding: 0.5rem;
+}
+
+.boton{
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.continuar{
+    transition: all 0.2s ease-in-out;
+    color: rgb(108, 108, 108);
+    background-color: blanchedalmond;
+    border: none;
+    border-radius: 0.3em;
+    font-size: 2em;
+    box-shadow: 1px 1px 1px black;
+}
+
+.continuar:hover{
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    color: aliceblue;
+    background-color: chocolate;
+    border: none;
+    border-radius: 0.3em;
+    font-size: 2.2em;
+    box-shadow: 2px 2px 2px black;
+}
+
+.inventario{
+    justify-content: center;
+    background-color: burlywood;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    margin-top: 2rem;
+    width: 35vw;
+    padding: 1em;
+    flex-wrap: wrap;
+    gap: 10px;
+    border: 10px groove brown;
+    box-shadow: 2px 2px 10px black inset;
+}
+
+.inventario img{
+    width: 4em;
+    height: 4em;
+    border-radius: 0.3em;
+}
+
+.inventario img:hover{
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+    scale: 1.1;
+    box-shadow: 2px 2px 2px brown;
+}
+
+.hueco{
+    width: 4em;
+    height: 4em;
+    border: brown groove 7px;
+    border-radius: 0.5em;
+}
