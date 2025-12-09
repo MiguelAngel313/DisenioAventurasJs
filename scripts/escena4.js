@@ -3,6 +3,7 @@ const jugador = JSON.parse(localStorage.getItem('jugadorSeleccionado'));
 const imgInventario = document.querySelectorAll('.inventario img');
 const imagenEnemigos = document.querySelectorAll('.enemigo img');
 const enemigos = crearEnemigos();
+const continuar = document.getElementById('continuar1');
 mostrarEnemigos();
 
 function mostrarInventario(){
@@ -41,3 +42,8 @@ function mostrarEnemigos(){
         punto[i].textContent = enemigos[i].puntos;
     }
 }
+
+continuar.addEventListener('click', function(){
+    localStorage.setItem('enemigos', JSON.stringify(enemigos));
+    window.location.href = 'Escena5.html';
+})
